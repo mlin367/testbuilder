@@ -19,6 +19,10 @@ var detectNetwork = function(cardNumber) {
   	return "Diner's Club";
   }else if((prefix === '34' || prefix === '37') && cardLength === 15){
   	return "American Express";
+  }else if((prefix === '51' || prefix === '52' || prefix === '53' || prefix === '54' || prefix === '55') && cardLength === 16){
+  	return "MasterCard";
+  }else if(prefix[0] === '4' && (cardLength === 13 || cardLength === 16 || cardLength === 19)){
+  	return "Visa";
   }
 };
 
