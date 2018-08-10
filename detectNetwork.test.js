@@ -265,7 +265,7 @@ describe('China UnionPay', function(){
 
   var assert = chai.assert;
 
-  for(let prefix = 622126; prefix <= 622295; prefix++){
+  for(let prefix = 622126; prefix <= 622925; prefix++){
     (function(prefix){
       it('has a prefix of ' + prefix + ' and a length of 16', function() {
         assert(detectNetwork(prefix + '3948203948') === 'China UnionPay');
