@@ -15,14 +15,20 @@ var detectNetwork = function(cardNumber) {
   // Once you've read this, go ahead and try to implement this function, then return to the console.
   let cardLength = cardNumber.length;
   let prefix = cardNumber.slice(0, 2);
+  let discover = RegExp('^(6011|64[4-9]|65)');
+  let maestro = RegExp('^(5018|5020|5038|6304)');
   if((prefix === '38' || prefix === '39') && cardLength === 14){
-  	return "Diner's Club";
+  	return 'Diner\'s Club';
   }else if((prefix === '34' || prefix === '37') && cardLength === 15){
-  	return "American Express";
+  	return 'American Express';
   }else if((prefix === '51' || prefix === '52' || prefix === '53' || prefix === '54' || prefix === '55') && cardLength === 16){
-  	return "MasterCard";
+  	return 'MasterCard';
   }else if(prefix[0] === '4' && (cardLength === 13 || cardLength === 16 || cardLength === 19)){
-  	return "Visa";
+  	return 'Visa';
+  }else if(discover.test(cardNumber) && (cardLength === 16 || cardLength === 19)){
+    return 'Discover';
+  }else if(maestro.test(cardNumber) && (cardLength === 12 || cardLength === 13 || cardLength === 14 || cardLength === 15 || cardLength === 16 || cardLength === 17 || cardLength === 18 || cardLength === 19)){
+    return 'Maestro';
   }
 };
 
