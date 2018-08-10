@@ -343,5 +343,254 @@ describe('Maestro', function() {
   });
 });
 
-describe('should support China UnionPay')     
-describe('should support Switch')
+describe('China UnionPay', function(){
+
+  var assert = chai.assert;
+
+  it('has a prefix of 622126 and a length of 16', function() {
+    assert(detectNetwork('6221269483720931') === 'China UnionPay');
+  });
+
+  it('has a prefix of 622126 and a length of 17', function() {
+    assert(detectNetwork('62212694837209313') === 'China UnionPay');
+  });
+
+  it('has a prefix of 622126 and a length of 18', function() {
+    assert(detectNetwork('622126948372093127') === 'China UnionPay');
+  });
+
+  it('has a prefix of 622126 and a length of 19', function() {
+    assert(detectNetwork('6221269483720931273') === 'China UnionPay');
+  });
+
+  it('has a prefix between 622126 and 622925 and a length of 16', function() {
+    assert(detectNetwork('6223753948574112') === 'China UnionPay');
+  });
+
+  it('has a prefix between 622126 and 622925 and a length of 17', function() {
+    assert(detectNetwork('62237539485741123') === 'China UnionPay');
+  });
+
+  it('has a prefix between 622126 and 622925 and a length of 18', function() {
+    assert(detectNetwork('622375394857411228') === 'China UnionPay');
+  });
+
+  it('has a prefix between 622126 and 622925 and a length of 19', function() {
+    assert(detectNetwork('6223753948574112366') === 'China UnionPay');
+  });
+
+  it('has a prefix 622925 and a length of 16', function() {
+    assert(detectNetwork('6229253948574112') === 'China UnionPay');
+  });
+
+  it('has a prefix 622925 and a length of 17', function() {
+    assert(detectNetwork('62292539485741123') === 'China UnionPay');
+  });
+
+  it('has a prefix 622925 and a length of 18', function() {
+    assert(detectNetwork('622925394857411228') === 'China UnionPay');
+  });
+
+  it('has a prefix 622925 and a length of 19', function() {
+    assert(detectNetwork('6229253948574112366') === 'China UnionPay');
+  });
+
+  it('has a prefix 624 and a length of 16', function() {
+    assert(detectNetwork('6240112391702345') === 'China UnionPay');
+  });
+
+  it('has a prefix 624 and a length of 17', function() {
+    assert(detectNetwork('62401123917023453') === 'China UnionPay');
+  });
+
+  it('has a prefix 624 and a length of 18', function() {
+    assert(detectNetwork('624011239170234509') === 'China UnionPay');
+  });
+
+  it('has a prefix 624 and a length of 19', function() {
+    assert(detectNetwork('6240112391702345365') === 'China UnionPay');
+  });
+
+  it('has a prefix 625 and a length of 16', function() {
+    assert(detectNetwork('6250112391702345') === 'China UnionPay');
+  });
+
+  it('has a prefix 625 and a length of 17', function() {
+    assert(detectNetwork('62501123917023453') === 'China UnionPay');
+  });
+
+  it('has a prefix 625 and a length of 18', function() {
+    assert(detectNetwork('625011239170234509') === 'China UnionPay');
+  });
+
+  it('has a prefix 625 and a length of 19', function() {
+    assert(detectNetwork('6250112391702345365') === 'China UnionPay');
+  });
+
+  it('has a prefix 626 and a length of 16', function() {
+    assert(detectNetwork('6260112391702345') === 'China UnionPay');
+  });
+
+  it('has a prefix 626 and a length of 17', function() {
+    assert(detectNetwork('62601123917023453') === 'China UnionPay');
+  });
+
+  it('has a prefix 626 and a length of 18', function() {
+    assert(detectNetwork('626011239170234509') === 'China UnionPay');
+  });
+
+  it('has a prefix 626 and a length of 19', function() {
+    assert(detectNetwork('6260112391702345365') === 'China UnionPay');
+  });
+
+  it('has a prefix 6282 and a length of 16', function() {
+    assert(detectNetwork('6282918223453667') === 'China UnionPay');
+  });
+
+  it('has a prefix 6282 and a length of 17', function() {
+    assert(detectNetwork('62829182234536672') === 'China UnionPay');
+  });
+
+  it('has a prefix 6282 and a length of 18', function() {
+    assert(detectNetwork('628291822345366797') === 'China UnionPay');
+  });
+
+  it('has a prefix 6282 and a length of 19', function() {
+    assert(detectNetwork('6282918223453667092') === 'China UnionPay');
+  });
+
+  it('has a prefix between 6282 and 6288 and a length of 16', function() {
+    assert(detectNetwork('6285918223453667') === 'China UnionPay');
+  });
+
+  it('has a prefix between 6282 and 6288 and a length of 17', function() {
+    assert(detectNetwork('62859182234536672') === 'China UnionPay');
+  });
+
+  it('has a prefix between 6282 and 6288 and a length of 18', function() {
+    assert(detectNetwork('628591822345366797') === 'China UnionPay');
+  });
+
+  it('has a prefix between 6282 and 6288 and a length of 19', function() {
+    assert(detectNetwork('6285918223453667092') === 'China UnionPay');
+  });
+
+  it('has a prefix 6288 and a length of 16', function() {
+    assert(detectNetwork('6288918223453667') === 'China UnionPay');
+  });
+
+  it('has a prefix 6288 and a length of 17', function() {
+    assert(detectNetwork('62889182234536672') === 'China UnionPay');
+  });
+
+  it('has a prefix 6288 and a length of 18', function() {
+    assert(detectNetwork('628891822345366797') === 'China UnionPay');
+  });
+
+  it('has a prefix 6288 and a length of 19', function() {
+    assert(detectNetwork('6288918223453667092') === 'China UnionPay');
+  });
+
+})     
+
+describe('Switch', function() {
+
+  var assert = chai.assert;
+
+  it('has a prefix of 4903 and a length of 16', function() {
+    assert(detectNetwork('4903291823512327') === 'Switch');
+  });
+
+  it('has a prefix of 4903 and a length of 18', function() {
+    assert(detectNetwork('490329182351232734') === 'Switch');
+  });
+
+  it('has a prefix of 4903 and a length of 19', function() {
+    assert(detectNetwork('4903291823512327948') === 'Switch');
+  });
+
+  it('has a prefix of 4905 and a length of 16', function() {
+    assert(detectNetwork('4905291823512327') === 'Switch');
+  });
+
+  it('has a prefix of 4905 and a length of 18', function() {
+    assert(detectNetwork('490529182351232734') === 'Switch');
+  });
+
+  it('has a prefix of 4905 and a length of 19', function() {
+    assert(detectNetwork('4905291823512327948') === 'Switch');
+  });
+
+  it('has a prefix of 4911 and a length of 16', function() {
+    assert(detectNetwork('4911291823512327') === 'Switch');
+  });
+
+  it('has a prefix of 4911 and a length of 18', function() {
+    assert(detectNetwork('491129182351232734') === 'Switch');
+  });
+
+  it('has a prefix of 4911 and a length of 19', function() {
+    assert(detectNetwork('4911291823512327948') === 'Switch');
+  });
+
+  it('has a prefix of 4936 and a length of 16', function() {
+    assert(detectNetwork('4936291823512327') === 'Switch');
+  });
+
+  it('has a prefix of 4936 and a length of 18', function() {
+    assert(detectNetwork('493629182351232734') === 'Switch');
+  });
+
+  it('has a prefix of 4936 and a length of 19', function() {
+    assert(detectNetwork('4936291823512327948') === 'Switch');
+  });
+
+  it('has a prefix of 564182 and a length of 16', function() {
+    assert(detectNetwork('5641823948302918') === 'Switch');
+  });
+
+  it('has a prefix of 564182 and a length of 18', function() {
+    assert(detectNetwork('564182394830291895') === 'Switch');
+  });
+
+  it('has a prefix of 564182 and a length of 19', function() {
+    assert(detectNetwork('5641823948302918090') === 'Switch');
+  });
+
+  it('has a prefix of 633110 and a length of 16', function() {
+    assert(detectNetwork('6331102938106677') === 'Switch');
+  });
+
+  it('has a prefix of 633110 and a length of 18', function() {
+    assert(detectNetwork('633110293810667734') === 'Switch');
+  });
+
+  it('has a prefix of 633110 and a length of 19', function() {
+    assert(detectNetwork('6331102938106677123') === 'Switch');
+  });
+
+  it('has a prefix of 6333 and a length of 16', function() {
+    assert(detectNetwork('6333293778892654') === 'Switch');
+  });
+
+  it('has a prefix of 6333 and a length of 18', function() {
+    assert(detectNetwork('633329377889265440') === 'Switch');
+  });
+
+  it('has a prefix of 6333 and a length of 19', function() {
+    assert(detectNetwork('6333293778892654232') === 'Switch');
+  });
+
+  it('has a prefix of 6759 and a length of 16', function() {
+    assert(detectNetwork('6759203948762711') === 'Switch');
+  });
+
+  it('has a prefix of 6759 and a length of 18', function() {
+    assert(detectNetwork('675920394876271154') === 'Switch');
+  });
+
+  it('has a prefix of 6759 and a length of 19', function() {
+    assert(detectNetwork('6759203948762711345') === 'Switch');
+  });
+
+})
